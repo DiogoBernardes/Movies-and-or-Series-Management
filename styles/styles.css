@@ -1,0 +1,54 @@
+body{
+    background-color: #252525 ;
+    background-blend-mode: multiply;
+    
+}
+
+input.form-search{
+    background-color: transparent;
+    border-radius: 100px;
+    color: #FFFFFF;
+    margin-left: 60px
+}
+
+.btn-sign-up {
+    background-color: #CC5643;
+}
+
+#carouselExampleIndicators {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Define um índice z para que fique atrás da barra de navegação */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+@media (max-width: 991px) {
+    .sidebar {
+      background-color: #161615;
+      backdrop-filter: blur(10px);
+    }
+
+    input.search-bar {
+        position: absolute;
+        top: 20%;
+        margin-left: 0;
+        left: 50%; 
+        transform: translateX(-50%);
+    }
+
+    .carousel-indicators {
+        
+        display: block;
+        text-align: center;
+    }
+  }
