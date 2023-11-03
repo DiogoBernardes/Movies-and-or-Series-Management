@@ -50,7 +50,7 @@ input.form-search {
   border-radius: 16px;
   padding: 16px;
   color: #ffffff;
-  max-width: 500px;
+  max-width: 700px;
   margin-top: 100px;
   transform: translateX(-15%);
 }
@@ -63,23 +63,64 @@ input.form-search {
 .description {
   font-family: "Times New Roman", Times, serif;
   margin-top: 2%;
+  max-width: 500px;
 }
 .information {
   font-family: "Times New Roman", Times, serif;
   font-size: larger;
   font-weight: bold;
   margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imdb-icon {
+  font-size: 25px;
 }
 
 .button-carousel {
   padding: 50px;
   margin-top: 500px;
-  transform: translateX(-240%);
+  transform: translateX(-260%);
 }
 
 .button-carousel a {
   border-radius: 25px;
   width: 150px;
+}
+
+@media (max-width: 1400px) {
+  .hero-carousel-item-content {
+    transform: translateX(-15%);
+  }
+  .button-carousel {
+    transform: translateX(-250%);
+  }
+}
+
+@media (max-width: 1200px) {
+  input.search-bar {
+    position: absolute;
+    top: 25%;
+    margin-left: 0;
+    left: 50%;
+    width: 100px;
+    transform: translateX(+170%);
+    font-size: 15px;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .hero-carousel-item-content {
+    transform: translateX(-5%);
+  }
+
+  .button-carousel {
+    transform: translateX(-240%);
+  }
 }
 
 @media (max-width: 991px) {
@@ -99,5 +140,11 @@ input.form-search {
   .carousel-indicators {
     display: block;
     text-align: center;
+  }
+  .hero-carousel-item-content {
+    transform: translateX(-3%);
+  }
+  .button-carousel {
+    transform: translateX(-200%);
   }
 }
