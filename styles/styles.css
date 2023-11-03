@@ -99,5 +99,9 @@ input.form-search {
   .carousel-indicators {
     display: block;
     text-align: center;
-  }
+  }  
+}
+
+.search-bar {
+  padding-left: 20px;
 }
