@@ -141,10 +141,4 @@ input.form-search {
     display: block;
     text-align: center;
   }
-  .hero-carousel-item-content {
-    transform: translateX(-3%);
-  }
-  .button-carousel {
-    transform: translateX(-200%);
-  }
 }
