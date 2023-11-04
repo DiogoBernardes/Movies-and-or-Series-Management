@@ -91,6 +91,31 @@ input.form-search {
   margin-right: 15px;
 }
 
+.iframe-container {
+  position: absolute;
+  transform: translateX(+100%);
+  width: 660px; /* Defina a largura desejada */
+  height: 415px; /* Defina a altura desejada */
+}
+
+#trailerIframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.close-button {
+  position: absolute;
+  border: 1px solid;
+  top: -5.5%;
+  right: -2.5%;
+  margin-top: 5px;
+  color: #fff;
+  display: none;
+}
+
 @media (max-width: 1440px) {
   .hero-carousel-item-content {
     transform: translateX(-5%);

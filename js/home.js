@@ -19,3 +19,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+function loadTrailer(index) {
+  var trailerIframe = document.getElementById("trailerIframe-" + index);
+  var closeButton = document.getElementById("closeButton-" + index);
+  if (trailerIframe && closeButton) {
+    var videoSrc = trailerIframe.getAttribute("data-src");
+    trailerIframe.setAttribute("src", videoSrc);
+    trailerIframe.style.display = "block";
+    closeButton.style.display = "block";
+  }
+}
+
+function hideTrailer(index) {
+  var trailerIframe = document.getElementById("trailerIframe-" + index);
+  var closeButton = document.getElementById("closeButton-" + index);
+  if (trailerIframe && closeButton) {
+    trailerIframe.style.display = "none";
+    closeButton.style.display = "none";
+  }
+}
