@@ -65,6 +65,7 @@ input.form-search {
   margin-top: 2%;
   max-width: 500px;
 }
+
 .information {
   font-family: "Times New Roman", Times, serif;
   font-size: larger;
@@ -90,12 +91,21 @@ input.form-search {
   width: 150px;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1920px) {
   .hero-carousel-item-content {
-    transform: translateX(-15%);
+    transform: translateX(-50%);
   }
   .button-carousel {
-    transform: translateX(-250%);
+    transform: translateX(-335%);
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero-carousel-item-content {
+    transform: translateX(-5%);
+  }
+  .button-carousel {
+    transform: translateX(-240%);
   }
 }
 
@@ -140,5 +150,37 @@ input.form-search {
   .carousel-indicators {
     display: block;
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .information {
+    font-size: medium;
+  }
+  .button-carousel {
+    transform: translateX(-205%);
+  }
+}
+
+@media (max-width: 426px) {
+  .hero-carousel-item-content {
+    max-width: 400px;
+    transform: translateX(-2%);
+  }
+  .hero-carousel-item-content h2 {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 12px;
+    width: 330px;
+  }
+
+  .information {
+    font-size: 12px;
+  }
+
+  .button-carousel {
+    transform: translateX(-165%);
   }
 }
