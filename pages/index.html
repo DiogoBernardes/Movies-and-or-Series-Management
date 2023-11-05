@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="/js/home.js"></script>
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+
+    <div class="container">
+      <a class="navbar-brand">
+        <img src="../assets/logo.png" alt="MovieBiz Logo" height="36" />
+      </a>
+
+
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+
+
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MovieBiz</h5>
+          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+
+
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+            <div class="navbar_options">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#movies">Movies</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#series">Series</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#watchlist">Watch List</a>
+              </li>
+            </div>
+            <li>
+              <form class="form">
+                <i class="fa fa-search"></i>
+                <input class="form-control form-input me-2" type="search" placeholder="Search" aria-label="Search" />
+              </form>
+            </li>
+          </ul>
+
+          <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+            <a href="#Login" class="text-white">Login</a>
+            <a href="#SignUp" class="btn-sign-up text-white text-decoration-none px-3 py-1 rounded-4">Sign
+              Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="Carousel" class="hero">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators d-flex">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="hero-carousel-item">
+                <img src="/assets/Oppenheimer.jpg" class="hero-carousel-item-background" alt="Slide 1" />
+                <div class="hero-carousel-item-content">
+
+                  <div class="movie-info">
+                    <h2>Oppenheimer</h2>
+                    <p class="movie-info__description">J. Robert Oppenheimer (Cillian Murphy), é um
+                      físico
+                      teórico da Universidade
+                      da
+                      Califórnia e diretor do
+                      Laboratório de Los Alamos que trabalha com uma equipa de cientistas durante
+                      o Projeto Manhattan -
+                      que
+                      tinha a missão
+                      de projetar e construir as primeiras bombas atômicas.
+                    <p class="movie-info__information"> 2023 | Drama | 3h <i class="fav-icon bi bi-heart"></i>
+                      <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.5</i></span>
+                    </p>
+                  </div>
+
+                  <div class="movie-info__button">
+                    <a class="btn btn-primary" href="https://embed.warezcdn.com/filme/tt15398776" role="button"> Watch
+                      now
+                      <i class="fas fa-play"></i></a>
+                    <a class="btn btn-danger" href="javascript:void(0);" role="button" onclick="loadTrailer(1)">Watch
+                      Trailer <i class="fas fa-play"></i></a>
+                  </div>
+
+                  <div class="movie-info__iframe-container">
+                    <iframe id="trailerIframe-1" class="movie-info__trailerIframe"
+                      data-src="https://www.youtube.com/embed/bK6ldnjE3Y0?si=geqmukJuPNrEE-0J"
+                      title="Oppenheimer - Trailer" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                    <button id="closeButton-1" class="btn movie-info__close-button" onclick="hideTrailer(1)">X</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="container">
+              <div class="hero-carousel-item">
+                <img src="/assets/avatar.jpg" class="hero-carousel-item-background" alt="Slide 2" />
+                <div class="hero-carousel-item-content">
+
+                  <div class="movie-info">
+                    <h2>Avatar: O caminho da água </h2>
+                    <p class="movie-info__description">"Avatar O Caminho da Água" decorre uma década
+                      após os
+                      acontecimentos do primeiro
+                      filme e conta a história da família Sully (Jake, Neytiri e os seus filhos),
+                      os seus
+                      problemas, as
+                      longas distâncias que vão percorrer para se manterem a salvo, as batalhas
+                      que lutam
+                      para se manterem
+                      vivos, e as tragédias que suportam.</p>
+                    <p class="movie-info__information"> 2022 | Ação, Aventura | 3h 12min <i
+                        class="fav-icon bi bi-heart"></i>
+                      <span><i class="imdb-icon fab fa-imdb"> &nbsp;7.6</i></span>
+                    </p>
+                  </div>
+
+
+                  <div class="movie-info__button">
+                    <a class="btn btn-primary" href="https://embed.warezcdn.com/filme/tt1630029" role="button"> Watch
+                      now <i class="fas fa-play"></i></a>
+                    <a class="btn btn-danger" href="javascript:void(0);" role="button" onclick="loadTrailer(2)">Watch
+                      Trailer
+                      <i class="fas fa-play"></i></a>
+                  </div>
+
+                  <div class="movie-info__iframe-container">
+                    <iframe id="trailerIframe-2" class="movie-info__trailerIframe"
+                      data-src="https://www.youtube.com/embed/d9MyW72ELq0?si=X2yZhkY1UF64YbQG"
+                      title="Avatar: The way of water - Trailer" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                    <button id="closeButton-2" class="btn movie-info__close-button" onclick="hideTrailer(2)">X</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="carousel-item">
+            <div class="container">
+              <div class="hero-carousel-item">
+                <img src="/assets/Nun.jpg" class="hero-carousel-item-background" alt="Slide 3" />
+                <div class="hero-carousel-item-content">
+
+                  <div class="movie-info">
+                    <h2>The Nun: A Freira Maldita II </h2>
+                    <p class="movie-info__description">1956, França. Um padre é assassinado, um mal
+                      espalha-se e a Irmã
+                      Irene volta a
+                      confrontar-se com a força malévola de Valak, a freira demoníaca.
+                    </p>
+                    <p class="movie-info__information"> 2023 | Thriller, Mistério, Terror | 1h 50min
+                      <i class="fav-icon bi bi-heart"></i>
+                      <span><i class="imdb-icon fab fa-imdb"> &nbsp;5.6</i></span>
+                    </p>
+                  </div>
+
+                  <div class="movie-info__button">
+                    <a class="btn btn-primary" href="https://embed.warezcdn.com/filme/tt10160976" role="button"> Watch
+                      now
+                      <i class="fas fa-play"></i></a>
+                    <a class="btn btn-danger" href="javascript:void(0);" role="button" onclick="loadTrailer(3)">Watch
+                      Trailer
+                      <i class="fas fa-play"></i></a>
+                  </div>
+
+                  <div class="movie-info__iframe-container">
+                    <iframe id="trailerIframe-3" class="movie-info__trailerIframe"
+                      data-src="https://www.youtube.com/embed/QF-oyCwaArU?si=zb7y90Z2WW1cFzZu"
+                      title="Avatar: The way of water - Trailer" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+                    <button id="closeButton-3" class="btn movie-info__close-button" onclick="hideTrailer(3)">X</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="container">
+        <p>OLAAAA</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

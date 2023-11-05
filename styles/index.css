@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar_options {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.form {
+  position: relative;
+}
+
+.form-input {
+  height: 30px;
+  text-indent: 33px;
+  border-radius: 10px;
+  margin-left: 15%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form .fa-search {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  right: 150px;
+  padding: 5px;
+}
+
+.btn-sign-up {
+  background-color: #cc5643;
+}
+
+/* Carousel Section*/
+.hero {
+  height: 100vh;
+}
+
+.hero-carousel-item-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-carousel-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100vh;
+  padding-bottom: 120px;
+  color: #ffffff;
+  /* margin-left: -15%;
+  margin-right: 15%;*/
+}
+
+.movie-info {
+  padding: 32px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  max-width: 600px;
+}
+
+.movie-info__description {
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 2%;
+  max-width: 500px;
+}
+
+.movie-info__information {
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie-info__button {
+  margin-top: 48px;
+}
+.movie-info__button a:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.movie-info__button a {
+  border-radius: 25px;
+  width: 150px;
+  margin-right: 15px;
+}
+
+.movie-info__iframe-container {
+  position: absolute;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 5%;
+}
+
+.movie-info__trailerIframe {
+  width: 660px;
+  height: 415px;
+}
+
+.movie-info__close-button {
+  position: absolute;
+  border: 1px solid;
+  top: -5.5%;
+  right: -2.5%;
+  margin-top: 5px;
+  color: #fff;
+  display: none;
+}
+
+/* Media Queries */
+
+@media (max-width: 1440px) {
+  .hero-carousel-item-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .movie-info__iframe-container {
+    right: 2%;
+  }
+  .movie-info__trailerIframe {
+    width: 500px;
+    height: 315px;
+  }
+}
+
+@media (max-width: 992px) {
+  .form-input {
+    width: 150px;
+  }
+
+  .form .fa-search {
+    right: 100px;
+  }
+
+  .movie-info__iframe-container {
+    right: 2%;
+    padding-bottom: 35px;
+  }
+
+  .hero-carousel-item-content {
+    max-width: 425px;
+  }
+
+  .movie-info__description {
+    font-size: 13px;
+  }
+
+  .movie-info__information {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    background-color: #161615;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form {
+    order: 1;
+  }
+
+  .navbar_options {
+    order: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-input {
+    margin-left: 5%;
+    width: 200px;
+  }
+
+  .fa-search {
+    left: 5%;
+  }
+
+  .movie-info__trailerIframe {
+    margin-right: 25%;
+  }
+  .movie-info__close-button {
+    margin-right: 25%;
+  }
+}
+
+@media (max-width: 426px) {
+  .movie-info__iframe-container {
+    right: -24%;
+  }
+
+  .movie-info__trailerIframe {
+    width: 420px;
+    height: 250px;
+  }
+}
