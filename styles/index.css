@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  /*background-color: rgba(42, 40, 40, 1);*/
 }
 
 * {
@@ -132,8 +133,78 @@ body {
   display: none;
 }
 
+/* List Movies and Series*/
+#hero-list {
+  background-color: rgba(42, 40, 40, 0.9);
+  height: 100vh;
+}
+.container-list {
+  max-width: 1440px;
+}
+.hero-list__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.hero-list__movie {
+  position: relative;
+}
+.hero-list__img {
+  margin-top: 30px;
+  width: 180px;
+  height: 235px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(37, 36, 36, 0.5);
+  transition: filter 0.5s;
+}
+
+.watch-button {
+  display: none;
+  background-color: #ef5252;
+  border-radius: 30px;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+.hero-list__movie:hover .hero-list__img {
+  filter: blur(5px);
+}
+
+.hero-list__movie:hover .watch-button {
+  display: block;
+}
+
+.hero-list__information {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.row {
+  margin-top: 30px;
+}
+
+.col {
+  margin-left: 5px;
+  width: 180px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 /* Media Queries */
 
+@media (min-width: 1920px) {
+  .hero-carousel-item-content {
+    margin-left: -20%;
+  }
+}
 @media (max-width: 1440px) {
   .hero-carousel-item-content {
     margin-left: 0;
