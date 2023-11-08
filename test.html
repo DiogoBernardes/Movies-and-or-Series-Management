@@ -1,0 +1,530 @@
+<!-- Este ficheiro tem chamadas a API -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="/js/home.js"></script>
+    <script src="/js/api.js"></script>
+    <link rel="stylesheet" href="/styles/index.css" />
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+
+        <div class="container">
+            <a class="navbar-brand">
+                <img src="../assets/logo.png" alt="MovieBiz Logo" height="36" />
+            </a>
+
+
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+
+
+                <div class="offcanvas-header text-white border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">StreamSync</h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <div class="navbar_options">
+                            <li class="nav-item mx-2">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#movies">Movies</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#series">Series</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#watchlist">Watch List</a>
+                            </li>
+                        </div>
+                        <li>
+                            <form class="form">
+                                <i class="fa fa-search"></i>
+                                <input id="title" class="form-control form-input me-2" type="search"
+                                    placeholder="Search" aria-label="Search" onkeydown="searchOnEnter(event)" />
+                            </form>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                        <a href="#Login" class="text-white">Login</a>
+                        <a href="#SignUp" class="btn-sign-up text-white text-decoration-none px-3 py-1 rounded-4">Sign
+                            Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section id="Carousel" class="hero">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators d-flex">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="hero-carousel-item">
+                                <img src="/assets/Oppenheimer.jpg" class="hero-carousel-item-background img-fluid"
+                                    alt="Slide 1" />
+                                <div class="hero-carousel-item-content">
+
+                                    <div class="movie-info">
+                                        <h2>Oppenheimer</h2>
+                                        <p class="movie-info__description">J. Robert Oppenheimer (Cillian Murphy), é um
+                                            físico
+                                            teórico da Universidade
+                                            da
+                                            Califórnia e diretor do
+                                            Laboratório de Los Alamos que trabalha com uma equipa de cientistas durante
+                                            o Projeto Manhattan -
+                                            que
+                                            tinha a missão
+                                            de projetar e construir as primeiras bombas atômicas.
+                                        <p class="movie-info__information"> 2023 | Drama | 3h <i
+                                                class="fav-icon bi bi-heart"></i>
+                                            <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.5</i></span>
+                                        </p>
+                                    </div>
+
+                                    <div class="movie-info__button">
+                                        <a class="btn btn-primary" href="https://embed.warezcdn.com/filme/tt15398776"
+                                            role="button"> Watch
+                                            now
+                                            <i class="fas fa-play"></i></a>
+                                        <a class="btn btn-danger" href="javascript:void(0);" role="button"
+                                            onclick="loadTrailer(1)">Watch
+                                            Trailer <i class="fas fa-play"></i></a>
+                                    </div>
+
+                                    <div class="movie-info__iframe-container">
+                                        <iframe id="trailerIframe-1" class="movie-info__trailerIframe"
+                                            data-src="https://www.youtube.com/embed/bK6ldnjE3Y0?si=geqmukJuPNrEE-0J"
+                                            title="Oppenheimer - Trailer" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                        <button id="closeButton-1" class="btn movie-info__close-button"
+                                            onclick="hideTrailer(1)">X</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="hero-carousel-item">
+                                <img src="/assets/avatar.jpg" class="hero-carousel-item-background img-fluid"
+                                    alt="Slide 2" />
+                                <div class="hero-carousel-item-content">
+
+                                    <div class="movie-info">
+                                        <h2>Avatar: O caminho da água </h2>
+                                        <p class="movie-info__description">"Avatar O Caminho da Água" decorre uma década
+                                            após os
+                                            acontecimentos do primeiro
+                                            filme e conta a história da família Sully (Jake, Neytiri e os seus filhos),
+                                            os seus
+                                            problemas, as
+                                            longas distâncias que vão percorrer para se manterem a salvo, as batalhas
+                                            que lutam
+                                            para se manterem
+                                            vivos, e as tragédias que suportam.</p>
+                                        <p class="movie-info__information"> 2022 | Ação, Aventura | 3h 12min <i
+                                                class="fav-icon bi bi-heart"></i>
+                                            <span><i class="imdb-icon fab fa-imdb"> &nbsp;7.6</i></span>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="movie-info__button">
+                                        <a class="btn btn-primary" href="https://embed.warezcdn.com/filme/tt1630029"
+                                            role="button"> Watch
+                                            now <i class="fas fa-play"></i></a>
+                                        <a class="btn btn-danger" href="javascript:void(0);" role="button"
+                                            onclick="loadTrailer(2)">Watch
+                                            Trailer
+                                            <i class="fas fa-play"></i></a>
+                                    </div>
+
+                                    <div class="movie-info__iframe-container">
+                                        <iframe id="trailerIframe-2" class="movie-info__trailerIframe"
+                                            data-src="https://www.youtube.com/embed/d9MyW72ELq0?si=X2yZhkY1UF64YbQG"
+                                            title="Avatar: The way of water - Trailer" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                        <button id="closeButton-2" class="btn movie-info__close-button"
+                                            onclick="hideTrailer(2)">X</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="hero-carousel-item">
+                                <img src="/assets/Nun.jpg" class="hero-carousel-item-background img-fluid"
+                                    alt="Slide 3" />
+                                <div class="hero-carousel-item-content">
+
+                                    <div class="movie-info">
+                                        <h2>The Nun: A Freira Maldita II </h2>
+                                        <p class="movie-info__description">1956, França. Um padre é assassinado, um mal
+                                            espalha-se e a Irmã
+                                            Irene volta a
+                                            confrontar-se com a força malévola de Valak, a freira demoníaca.
+                                        </p>
+                                        <p class="movie-info__information"> 2023 | Thriller, Mistério, Terror | 1h 50min
+                                            <i class="fav-icon bi bi-heart"></i>
+                                            <span><i class="imdb-icon fab fa-imdb"> &nbsp;5.6</i></span>
+                                        </p>
+                                    </div>
+
+                                    <div class="movie-info__button">
+                                        <a class="btn btn-primary" href="https://embed.warezcdn.com/filme/tt10160976"
+                                            role="button"> Watch
+                                            now
+                                            <i class="fas fa-play"></i></a>
+                                        <a class="btn btn-danger" href="javascript:void(0);" role="button"
+                                            onclick="loadTrailer(3)">Watch
+                                            Trailer
+                                            <i class="fas fa-play"></i></a>
+                                    </div>
+
+                                    <div class="movie-info__iframe-container">
+                                        <iframe id="trailerIframe-3" class="movie-info__trailerIframe"
+                                            data-src="https://www.youtube.com/embed/QF-oyCwaArU?si=zb7y90Z2WW1cFzZu"
+                                            title="Avatar: The way of water - Trailer" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                        <button id="closeButton-3" class="btn movie-info__close-button"
+                                            onclick="hideTrailer(3)">X</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="hero-list">
+            <div class="container container-list-movies ">
+                <div class="hero-list__items">
+                    <div class="row list-row">
+                        <h2>Movies</h2>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/movies/interstellar.jpg" class="hero-list__img"
+                                    alt="interstellar" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">Interstellar</p>
+                            <div class="hero-list__information">
+                                <p>2014</p>
+                                <p>2h49</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.7</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/movies/five_nights_at_freddy's.jpg" class="hero-list__img"
+                                    alt="Five Nights at Freddy's" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">Five Nights at Freddy's</p>
+                            <div class="hero-list__information">
+                                <p>2023</p>
+                                <p>1h49</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;5.5</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/movies/o_padrinho.jpg" class="hero-list__img"
+                                    alt="The Godfather" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">The Godfather</p>
+                            <div class="hero-list__information">
+                                <p>1972</p>
+                                <p>2h55</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;9.2</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/movies/senhor_dos_aneis.jpg" class="hero-list__img"
+                                    alt="O Senhor dos Anéis - O Regresso do Rei" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">O Senhor dos Anéis - O Regresso do Rei</p>
+                            <div class="hero-list__information">
+                                <p>2003</p>
+                                <p>3h21</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;9.0</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/movies/shrek2.jpg" class="hero-list__img" alt="Shrek 2" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">Shrek 2</p>
+                            <div class="hero-list__information">
+                                <p>2004</p>
+                                <p>1h33</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;7.3</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/movies/the_intouchables.jpeg" class="hero-list__img"
+                                    alt="The Intouchables" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">The Intouchable</p>
+                            <div class="hero-list__information">
+                                <p>2011</p>
+                                <p>1h52</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.5</i></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="hero-list__items">
+                    <div class="row list-row">
+                        <h2>Series</h2>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/series/The_100.jpg" class="hero-list__img" alt="The 100" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">The 100</p>
+                            <div class="hero-list__information">
+                                <p>2014</p>
+                                <p>43m</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;7.6</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/series/vikings.jpg" class="hero-list__img" alt="Vikings" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">Vikings</p>
+                            <div class="hero-list__information">
+                                <p>2013</p>
+                                <p>44m</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.5</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/series/the_mandalorian.jpg" class="hero-list__img"
+                                    alt="The Mandalorian" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">The Mandalorian</p>
+                            <div class="hero-list__information">
+                                <p>2019 </p>
+                                <p>40m</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.7</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/series/see.jpeg" class="hero-list__img" alt="See" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">See</p>
+                            <div class="hero-list__information">
+                                <p>2019</p>
+                                <p>1h</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;7.6</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/series/vis_a_vis.png" class="hero-list__img"
+                                    alt="Vis a Vis" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">Vis a Vis</p>
+                            <div class="hero-list__information">
+                                <p>2015</p>
+                                <p>53m</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.1</i></span>
+                            </div>
+                        </div>
+
+                        <div class="col list-col">
+                            <div class="hero-list__movie">
+                                <img src="/assets/overlays/series/peaky_blinders.jpg" class="hero-list__img"
+                                    alt="Peaky Blinders" />
+                                <button class="watch-button">Assistir Online</button>
+                            </div>
+                            <p class="hero-list__movie-title">Peaky Blinders</p>
+                            <div class="hero-list__information">
+                                <p>2013</p>
+                                <p>55m</p>
+                                <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.8</i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hero-features">
+
+            <div class="hero-features__list">
+                <div class="container hero-features__container">
+                    <div class="row hero-features-row">
+                        <div class="col">
+                            <img src="/assets/REVIEW MOCKUP.png" class="hero-features__img-left"
+                                alt="review and rating  " />
+                        </div>
+                        <div class="col hero-features-col">
+                            <h2>Compartilhe a sua paixão pelo cinema</h2>
+                            <p>As suas críticas e as suas avaliações ajudam a trazer a Magia do Cinema à Vida!
+                                Descubra o que os nossos utilizadores tem a dizer a cerca da sua próxima experiência
+                                cinematográfica
+                                com
+                                confiança e ajude a construir esta comunidade fazendo as suas próprias críticas e
+                                avaliações das suas
+                                experiências.</p>
+                        </div>
+                    </div>
+
+                    <div class="row hero-features-row">
+                        <div class="col hero-features-col">
+                            <h2>Faça a sua avaliação a qualquer hora e lugar</h2>
+                            <p>Oferecemos lhe a possibilidade de realizar as suas críticas e as suas avaliações a
+                                qualquer momento
+                                e em qualquer lugar. A nossa plataforma é multiplataforma e está disponível para todos
+                                os
+                                dispositivos móveis e computadores.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <img src="/assets/multiplataform-mockup.png" class="hero-features__img-right"
+                                alt="review and rating  " />
+                        </div>
+                    </div>
+
+                    <div class="row hero-features-row">
+                        <div class="col">
+                            <img src="/assets/watch-after mockup.png" class="hero-features__img-left"
+                                alt="review and rating  " />
+                        </div>
+                        <div class="col hero-features-col">
+                            <h2>Agende a data para ver o seu filme e deixe a diversão ser inesquecível!</h2>
+                            <p>Não perca a chance de viver uma experiência cinematográfica incrível. Agende a data para
+                                o seu filme e
+                                crie memórias que durarão para sempre.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center">
+
+        <p class="col-md-4 mb-0">2023 StreamSync</p>
+        <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src="../assets/logo.png" alt="MovieBiz Logo" height="36" />
+        </a>
+        <ul class="nav footer-social-icons col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+                <a href="https://twitter.com/home?lang=pt">
+                    <i class="bi bi-twitter"></i>
+                </a>
+            </li>
+            <li class="ms-3">
+                <a href="https://www.instagram.com/">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </li>
+            <li class="ms-3">
+                <a href="https://github.com/DiogoBernardes/Movies-and-or-Series-Management">
+                    <i class="bi bi-github"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <section>
+        <div id="search-results">
+            <!-- Os resultados da pesquisa da API serão exibidos aqui -->
+        </div>
+
+    </section>
+
+    <section id="hero-list">
+        <div class="container container-list-movies">
+            <div class="hero-list__items-js">
+                <!-- O conteúdo das séries será gerado dinamicamente pelo JavaScript -->
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
