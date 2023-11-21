@@ -17,164 +17,185 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <!--bg-transparent-->
-    <div class="container">
-      <a class="navbar-brand">
-        <img src="../assets/logo.png" alt="StreamSync Logo" height="36" />
-      </a>
+  <nav class="navbar w-100 position-fixed top-0 bot-0 navbar-expand-lg navbar-dark">
 
+    <a class="navbar-brand ms-5">
+      <img src="../assets/logo.png" alt="StreamSync Logo" height="36" />
+    </a>
 
-      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-        aria-labelledby="offcanvasNavbarLabel">
+    <div class="d-flex flex-column bg-black offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
 
+      <div class="offcanvas-header text-white border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">StreamSync</h5>
+        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+          aria-label="Close"></button>
+      </div>
 
-        <div class="offcanvas-header text-white border-bottom">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">StreamSync</h5>
-          <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
+      <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+          <div class="custom-font position-relative d-flex flex-row justify-content-end align-items-start">
+            <li class="nav-item mx-2">
+              <a class="nav-link active fs-6" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fs-6" href="#movies">Movies</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fs-6" href="#series">Series</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fs-6" href="#watchlist">Watch List</a>
+            </li>
+          </div>
+        </ul>
+
+        <div class="mt-1">
+          <form class="position-relative float-end">
+            <div class="input-group input-group-rounded text-end ml-2">
+              <span class="input-group-text form-input">
+                <i class="fa fa-search"></i>
+              </span>
+              <input class="custom-font form-input form-control form-control-rounded  me-2 form-control-sm"
+                type="search" placeholder="Search" aria-label="Search" />
+            </div>
+          </form>
         </div>
 
-
-        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-            <div class="navbar_options">
-              <li class="nav-item mx-2">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#movies">Movies</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#series">Series</a>
-              </li>
-              <li class="nav-item mx-2">
-                <a class="nav-link" href="#watchlist">Watch List</a>
-              </li>
-            </div>
-            <li>
-              <form class="form">
-                <i class="fa fa-search"></i>
-                <input class="form-control form-input me-2" type="search" placeholder="Search" aria-label="Search" />
-              </form>
-            </li>
-          </ul>
-
-          <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-            <a href="#login" class="btn-sign-up text-white text-decoration-none px-3 py-1 rounded-4">Login
-            </a>
-          </div>
+        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3 me-5 ">
+          <a href="#login"
+            class="btn-sign-up custom-font w-100 text-align-center text-white text-decoration-none px-3 py-1 rounded-4 ms-3">Login</a>
         </div>
       </div>
     </div>
+
   </nav>
 
   <main>
 
-    <section id="home" class="hero">
-      <div class="container">
-        <img src="/assets/background.jpg" class="hero-home__background img-fluid" alt="background">
-        <div class="hero-home__item">
-          <div class="hero-home__item__content">
-            <img src="/assets/logo.png" class="hero-home__item__content__logo img-fluid" alt="background">
-            <h1 class="hero-home__item__title">Explore, compartilhe e gerencie os seus filmes e séries favoritos</h1>
-            <p class="hero-home__item__description">Faça parte da nossa comunidade de entusiastas do cinema e TV.<br>
-              Organize e compartilhe a sua coleção, classifique, comente e conecte-se com outros amantes do
-              entretenimento. <br>Registe-se agora para começar a compartilhar a magia do cinema e da TV.
-            </p>
-            <div class="hero-home__item__button">
-              <a class="btn btn-danger" href="" role="button">COMECE JÁ</a>
-            </div>
+    <section id="home" class="position-relative">
+      <img src="/assets/background.jpg" class="img-fluid h-100 w-100 z-index-negative-1 opacity-75" alt="Background">
+      <div class="hero-home__item position-absolute top-0 start-0 w-100 h-100 ">
+        <div class="d-flex flex-column justify-content-center align-items-center h-100 text-white text-center">
+          <img src="/assets/logo.png" class="img-fluid mx-auto d-block mb-3 mt-5 " width="400" alt="Logo">
+          <h1 class="custom-font display-5 font-weight-bold mb-3">Explore, compartilhe e gerencie os seus
+            filmes e séries favoritos</h1>
+          <p class="custom-font lead mb-3">Faça parte da nossa comunidade de entusiastas do cinema
+            e
+            TV.<br>
+            Organize e compartilhe a sua coleção, classifique, comente e conecte-se com outros amantes do
+            entretenimento. <br>Registe-se agora para começar a compartilhar a magia do cinema e da TV.
+          </p>
+          <div class="mt-5">
+            <a class="btn btn-danger btn-lg btn-block" href="#" role="button">
+              <span class="custom-font">Comece Já</span>
+            </a>
           </div>
         </div>
     </section>
 
-    <section id="hero-list">
+    <section id="hero-list" class="h-auto ">
       <div class="container">
-        <div class="hero-list__items">
-          <div class="row list-row">
-            <h2>Movies</h2>
+        <div class="d-flex align-items-center justify-content-center text-white">
+          <div class="row mt-5">
+            <div class="w-50 mx-auto mt-5">
+              <h1 class="custom-font text-center mb-3 display-10 fw-bold pb-2 border-bottom">
+                Recomendações</h1>
+            </div>
+            <h2 class="custom-font">Movies</h2>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/movies/interstellar.jpg" class="hero-list__img" alt="interstellar" />
-                <button class="watch-button">Assistir Online</button>
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/movies/interstellar.jpg" class="hero-list__img mt-3 rounded "
+                  alt="interstellar" />
+                <button class="watch-button custom-font position-absolute top-50 ms-4 border-0 text-black rounded-4">
+                  Assistir Online
+                </button>
               </div>
-              <p class="hero-list__movie-title">Interstellar</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">Interstellar</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2014</p>
                 <p>2h49</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.7</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/movies/five_nights_at_freddy's.jpg" class="hero-list__img"
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/movies/five_nights_at_freddy's.jpg" class="hero-list__img mt-3 rounded "
                   alt="Five Nights at Freddy's" />
-                <button class="watch-button">Assistir Online</button>
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">Five Nights at Freddy's</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">Five Nights
+                at
+                Freddy's</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2023</p>
                 <p>1h49</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;5.5</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/movies/o_padrinho.jpg" class="hero-list__img" alt="The Godfather" />
-                <button class="watch-button">Assistir Online</button>
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/movies/o_padrinho.jpg" class="hero-list__img mt-3 rounded "
+                  alt="The Godfather" />
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">The Godfather</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">The Godfather</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>1972</p>
                 <p>2h55</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;9.2</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/movies/senhor_dos_aneis.jpg" class="hero-list__img"
-                  alt="O Senhor dos Anéis - O Regresso do Rei" />
-                <button class="watch-button">Assistir Online</button>
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/movies/senhor_dos_aneis.jpg" class="hero-list__img mt-3 rounded "
+                  alt="Shrek 2" />
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">O Senhor dos Anéis - O Regresso do Rei</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">O Senhor dos Anéis
+              </p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2003</p>
                 <p>3h21</p>
-                <span><i class="imdb-icon fab fa-imdb"> &nbsp;9.0</i></span>
+                <span><i class="imdb-icon fab fa-imdb"> &nbsp;7.3</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/movies/shrek2.jpg" class="hero-list__img" alt="Shrek 2" />
-                <button class="watch-button">Assistir Online</button>
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/movies/shrek2.jpg" class="hero-list__img mt-3 rounded " alt="Shrek 2" />
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">Shrek 2</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">Shrek 2</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2004</p>
                 <p>1h33</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;7.3</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/movies/the_intouchables.jpeg" class="hero-list__img"
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/movies/the_intouchables.jpeg" class="hero-list__img mt-3 rounded "
                   alt="The Intouchables" />
-                <button class="watch-button">Assistir Online</button>
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">The Intouchable</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">The Intouchable</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2011</p>
                 <p>1h52</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.5</i></span>
@@ -184,82 +205,92 @@
           </div>
         </div>
 
-        <div class="hero-list__items">
-          <div class="row list-row">
-            <h2>Series</h2>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/series/The_100.jpg" class="hero-list__img" alt="The 100" />
-                <button class="watch-button">Assistir Online</button>
+        <div class="text-white">
+          <div class="row mt-5">
+            <h2 class="custom-font">Series</h2>
+
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/series/The_100.jpg" class="hero-list__img  mt-3 rounded " alt="The 100" />
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">The 100</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">The 100</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2014</p>
                 <p>43m</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;7.6</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/series/vikings.jpg" class="hero-list__img" alt="Vikings" />
-                <button class="watch-button">Assistir Online</button>
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/series/vikings.jpg" class="hero-list__img  mt-3 rounded " alt="Vikings" />
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">Vikings</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">Vikings</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2013</p>
                 <p>44m</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.5</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/series/the_mandalorian.jpg" class="hero-list__img" alt="The Mandalorian" />
-                <button class="watch-button">Assistir Online</button>
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/series/the_mandalorian.jpg" class="hero-list__img  mt-3 rounded "
+                  alt="The Mandalorian" />
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">The Mandalorian</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">The Mandalorian</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2019 </p>
                 <p>40m</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.7</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/series/see.jpeg" class="hero-list__img" alt="See" />
-                <button class="watch-button">Assistir Online</button>
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/series/see.jpeg" class="hero-list__img  mt-3 rounded " alt="See" />
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">See</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">See</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2019</p>
                 <p>1h</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;7.6</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/series/vis_a_vis.png" class="hero-list__img" alt="Vis a Vis" />
-                <button class="watch-button">Assistir Online</button>
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/series/vis_a_vis.png" class="hero-list__img  mt-3 rounded "
+                  alt="Vis a Vis" />
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">Vis a Vis</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">Vis a Vis</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2015</p>
                 <p>53m</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.1</i></span>
               </div>
             </div>
 
-            <div class="col list-col">
-              <div class="hero-list__movie">
-                <img src="/assets/overlays/series/peaky_blinders.jpg" class="hero-list__img" alt="Peaky Blinders" />
-                <button class="watch-button">Assistir Online</button>
+            <div class="col ms-1">
+              <div class="hero-list__movie position-relative">
+                <img src="/assets/overlays/series/peaky_blinders.jpg" class="hero-list__img  mt-3 rounded "
+                  alt="Peaky Blinders" />
+                <button class="watch-button position-absolute top-50 ms-4 border-0 text-black rounded-4">Assistir
+                  Online</button>
               </div>
-              <p class="hero-list__movie-title">Peaky Blinders</p>
-              <div class="hero-list__information">
+              <p class="custom-font overflow-hidden text-nowrap d-inline-block text-truncate w-75">Peaky Blinders</p>
+              <div class="custom-font w-75 d-flex justify-content-between">
                 <p>2013</p>
                 <p>55m</p>
                 <span><i class="imdb-icon fab fa-imdb"> &nbsp;8.8</i></span>
@@ -271,16 +302,21 @@
     </section>
 
     <section id="hero-features">
+      <div class="d-flex justify-content-center align-items-center text-white">
+        <div class="container mt-5">
+          <div class="w-50 mx-auto text-white mb-4">
+            <h1 class="custom-font text-center mb-3 display-10 fw-bold pb-2 border-bottom">
+              Serviços</h1>
+          </div>
 
-      <div class="hero-features__list">
-        <div class="container hero-features__container">
-          <div class="row hero-features-row">
-            <div class="col">
-              <img src="/assets/REVIEW MOCKUP.png" class="hero-features__img-left" alt="review and rating  " />
+          <div class="row hero-features-row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-sm-6 col-md-4">
+              <img src="/assets/REVIEW MOCKUP.png" class="w-100 h-auto" alt="review and rating  " />
             </div>
-            <div class="col hero-features-col">
-              <h2>Compartilhe a sua paixão pelo cinema</h2>
-              <p>As suas críticas e as suas avaliações ajudam a trazer a Magia do Cinema à Vida!
+            <div class="col-12 col-sm-6 col-md-8">
+              <h2 class="custom-font text-justify font-weight-bold">Compartilhe a sua paixão pelo cinema</h2>
+              <p class="custom-font text-justify">As suas críticas e as suas avaliações ajudam a trazer a Magia do
+                Cinema à Vida!
                 Descubra o que os nossos utilizadores tem a dizer a cerca da sua próxima experiência cinematográfica
                 com
                 confiança e ajude a construir esta comunidade fazendo as suas próprias críticas e avaliações das suas
@@ -288,37 +324,44 @@
             </div>
           </div>
 
-          <div class="row hero-features-row">
-            <div class="col hero-features-col">
-              <h2>Faça a sua avaliação a qualquer hora e lugar</h2>
-              <p>Oferecemos lhe a possibilidade de realizar as suas críticas e as suas avaliações a qualquer momento
+          <div class="row hero-features-row d-flex justify-content-center align-items-center border-top mt-4">
+            <div class=" col-12 col-sm-6 col-md-8">
+              <h2 class="custom-font text-justify font-weight-bold">Faça a sua avaliação a qualquer hora e lugar</h2>
+              <p class="custom-font text-justify">Oferecemos lhe a possibilidade de realizar as suas críticas e as suas
+                avaliações a
+                qualquer momento
                 e em qualquer lugar. A nossa plataforma é multiplataforma e está disponível para todos os
                 dispositivos móveis e computadores.
               </p>
             </div>
-            <div class="col ">
-              <img src="/assets/multiplataform-mockup.png" class="hero-features__img-right" alt="review and rating  " />
+            <div class="col-12 col-sm-6 col-md-4">
+              <img src="/assets/multiplataform-mockup.png" class="w-100 h-auto ms-4" alt="review and rating  " />
             </div>
           </div>
 
-          <div class="row hero-features-row">
-            <div class="col">
-              <img src="/assets/watch-after mockup.png" class="hero-features__img-left" alt="review and rating  " />
+          <div class="row hero-features-row d-flex justify-content-center align-items-center border-top mt-4">
+            <div class=" col-12 col-sm-6 col-md-4 ">
+              <img src="/assets/watch-after mockup.png" class="w-100 h-auto" alt="review and rating " />
             </div>
-            <div class="col hero-features-col">
-              <h2>Agende a data para ver o seu filme e deixe a diversão ser inesquecível!</h2>
-              <p>Não perca a chance de viver uma experiência cinematográfica incrível. Agende a data para o seu filme e
+            <div class="col-12 col-sm-6 col-md-8">
+              <h2 class="custom-font text-justify font-weight-bold">Agende a data para ver o seu filme e deixe a
+                diversão
+                ser inesquecível!
+              </h2>
+              <p class="custom-font text-justify">Não perca a chance de viver uma experiência cinematográfica incrível.
+                Agende a data
+                para o seu filme e
                 crie memórias que durarão para sempre.</p>
             </div>
           </div>
-
         </div>
       </div>
-
     </section>
+
   </main>
 
-  <footer class="d-flex flex-wrap justify-content-between align-items-center">
+  <footer
+    class="position-relative d-flex flex-wrap justify-content-between align-items-center text-white w-100 h-100 p-4">
 
     <p class="col-md-4 mb-0">2023 StreamSync</p>
     <a href="/"
@@ -328,24 +371,21 @@
     <ul class="nav footer-social-icons col-md-4 justify-content-end list-unstyled d-flex">
       <li class="ms-3">
         <a href="https://twitter.com/home?lang=pt">
-          <i class="bi bi-twitter"></i>
+          <i class="bi bi-twitter text-white"></i>
         </a>
       </li>
       <li class="ms-3">
         <a href="https://www.instagram.com/">
-          <i class="bi bi-instagram"></i>
+          <i class="bi bi-instagram text-white"></i>
         </a>
       </li>
       <li class="ms-3">
         <a href="https://github.com/DiogoBernardes/Movies-and-or-Series-Management">
-          <i class="bi bi-github"></i>
+          <i class="bi bi-github text-white"></i>
         </a>
       </li>
     </ul>
   </footer>
-
-
-
 </body>
 
 </html>
