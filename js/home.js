@@ -39,3 +39,20 @@ function hideTrailer(index) {
     closeButton.style.display = "none";
   }
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const searchBar = document.getElementById('searchBar');
+  const offcanvas = document.getElementById('offcanvasNavbar');
+
+  // Evento quando a offcanvas está sendo aberta
+  offcanvas.addEventListener('show.bs.offcanvas', function () {
+      searchBar.style.display = 'none';
+  });
+
+  // Evento quando a offcanvas está sendo fechada
+  offcanvas.addEventListener('hide.bs.offcanvas', function () {
+      searchBar.style.display = '';
+  });
+});
+

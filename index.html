@@ -23,8 +23,7 @@
       <img src="../assets/logo.png" alt="StreamSync Logo" height="36" />
     </a>
 
-    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <button id="toggleOffcanvasButton" class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -56,14 +55,13 @@
         </ul>
 
         <div class="mt-1">
-          <form class="position-relative float-end">
-            <div class="input-group input-group-rounded text-end ml-2">
-              <span class="input-group-text form-input">
-                <i class="fa fa-search"></i>
-              </span>
-              <input class="custom-font form-input form-control form-control-rounded  me-2 form-control-sm"
-                type="search" placeholder="Search" aria-label="Search" />
-            </div>
+          <form id="searchForm" class="position-relative float-end">
+              <div id="searchBar" class="input-group input-group-rounded text-end ml-2">
+                  <span class="input-group-text form-input">
+                      <i class="fa fa-search"></i>
+                  </span>
+                  <input class="custom-font form-input form-control form-control-rounded me-2 form-control-sm" type="search" placeholder="Search" aria-label="Search" />
+              </div>
           </form>
         </div>
 
