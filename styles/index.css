@@ -26,7 +26,7 @@
 }
 
 /* List Movies and Series*/
-#hero-list {
+#recomendacoes {
   background-color: rgba(42, 40, 40, 0.9);
 }
 .hero-list__img {
@@ -47,7 +47,7 @@
 }
 
 /*Features*/
-#hero-features {
+#services {
   background-color: rgba(42, 40, 40, 1);
 }
 .hero-features-row {
