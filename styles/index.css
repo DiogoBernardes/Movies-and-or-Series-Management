@@ -15,7 +15,6 @@
 }
 .navbar-nav .nav-link:hover {
   color: #cc5643;
-  
 }
 /* Homepage Section*/
 #home {
@@ -58,7 +57,12 @@
   height: 500px;
   width: 100%;
 }
+
+/* About */
+#sobre {
+  background-color: rgba(42, 40, 40, 0.9);
+}
 /* Footer */
 footer {
-  background-color: rgba(42, 40, 40, 0.9);
+  background-color: rgba(42, 40, 40, 1);
 }
