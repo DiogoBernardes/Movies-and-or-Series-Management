@@ -18,45 +18,34 @@
 <body>
 
   <nav class="navbar w-100 position-fixed top-0 bot-0 navbar-expand-lg navbar-dark">
-
     <a class="navbar-brand ms-5">
-      <img src="../assets/logo.png" alt="StreamSync Logo" height="36" />
+        <img src="../assets/logo.png" alt="StreamSync Logo" height="36" />
     </a>
 
-    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler shadow-none border-0 d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="d-flex flex-column bg-black offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-      aria-labelledby="offcanvasNavbarLabel">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+        <div class="custom-font position-relative d-flex flex-row justify-content-end align-items-start">
+          <li class="nav-item mx-2">
+            <a class="nav-link active fs-6" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link fs-6" href="#recomendacoes">Recomendações</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link fs-6" href="#services">Serviços</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link fs-6" href="#watchlist">Watch List</a>
+          </li>
+        </div>
+      </ul>
 
-      <div class="offcanvas-header text-white border-bottom">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">StreamSync</h5>
-        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
-          aria-label="Close"></button>
-      </div>
-
-      <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-          <div class="custom-font position-relative d-flex flex-row justify-content-end align-items-start">
-            <li class="nav-item mx-2">
-              <a class="nav-link active fs-6" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link fs-6" href="#recomendacoes">Recomendações</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link fs-6" href="#services">Serviços</a>
-            </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link fs-6" href="#watchlist">Watch List</a>
-            </li>
-          </div>
-        </ul>
-
-        <div class="mt-1">
-          <form class="position-relative float-end">
+        <form class="d-flex">
             <div class="input-group input-group-rounded text-end ml-2">
               <span class="input-group-text form-input">
                 <i class="fa fa-search"></i>
@@ -64,17 +53,57 @@
               <input class="custom-font form-input form-control form-control-rounded  me-2 form-control-sm"
                 type="search" placeholder="Search" aria-label="Search" />
             </div>
-          </form>
-        </div>
+        </form>
 
         <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3 me-5 ">
           <a href="#login"
             class="btn-sign-up custom-font w-100 text-align-center text-white text-decoration-none px-3 py-1 rounded-4 ms-3">Login</a>
         </div>
+    </div>
+</nav>
+
+  <div class="offcanvas offcanvas-end bg-black" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header text-white border-bottom">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">StreamSync</h5>
+        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column p-4 p-lg-0 text-white">
+        <ul class="navbar-nav  align-items-center fs-5 flex-grow-1 pe-3">
+          <div class="w-100 mt-5 mb-5 d-flex flex-column">
+            <form class="position-relative float-end">
+              <div class="input-group input-group-rounded text-end ml-2">
+                <span class="input-group-text form-input">
+                  <i class="fa fa-search"></i>
+                </span>
+                <input class="custom-font form-input form-control form-control-rounded  me-2 form-control-sm"
+                  type="search" placeholder="Search" aria-label="Search" />
+              </div>
+            </form>
+          </div>
+          <div class="custom-font position-relative d-flex flex-column justify-content-center align-items-center">
+            <li class="nav-item mx-2">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link " href="#recomendacoes">Recomendações</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link " href="#services">Serviços</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#watchlist">Watch List</a>
+            </li>
+          </div>
+        </ul>
+
+        
+
+        <div class="d-flex flex-column justify-content-center align-items-center gap-3 mb-5">
+          <a href="#login" class="btn-sign-up custom-font w-50 text-center text-white text-decoration-none py-1 rounded-4">Login</a>
+      </div>
       </div>
     </div>
-
-  </nav>
+  </div>
 
   <main>
 
